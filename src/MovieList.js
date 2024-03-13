@@ -10,6 +10,7 @@ class MovieList extends React.Component{
               <MovieCard/>
               <MovieCard/>
               <MovieCard/>
+              <Moviecard/>
 
             </>
         )
