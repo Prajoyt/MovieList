@@ -1,18 +1,7 @@
 import React from "react";
 
 class MovieCard extends React.Component {
-  constructor() {
-    super(); // The super keyword calls the constructor of the parent class  the constructor of React.Component class
-    this.state = {
-      title: "The Avengers!!!!",
-      plot: "Supernatural heros trying supernatural things",
-      price: "299",
-      rating: 8.9,
-      stars: 0,
-      fav:false,
-      cart:false,
-    };
-  }
+  
   // addStars(){
   //     console.log('this', this)
   // }
@@ -70,7 +59,13 @@ this.setState({
 
 
   render() {
-    const { plot, price, rating, stars,fav,cart } = this.state;
+    /*if we want to change the name of movies to data that can be done in folowing way
+    const{movies:data}=this.props;
+    console.log(data);
+    const { plot, price, rating, stars,fav,cart } = data;*/
+
+const{plot,price,rating,stars,fav,cart}=this.props.movies
+
     return (
       <div className="main">
         <div className="movie-card">
@@ -81,7 +76,7 @@ this.setState({
             />
           </div>
           <div className="right">
-            <div className="title">{this.state.title}</div>
+            <div className="title">{this.props.movies.title}</div>
             <div className="plot">{plot}</div>
             <div className="price"> Rs.{price}</div>
 
