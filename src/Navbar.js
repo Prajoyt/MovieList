@@ -2,11 +2,12 @@ import React from "react";
  import styles from './Navbar.module.css'
 
 
- class Navbar extends React.Component {
+ function Navbar(props) {
 
   
-    render() {   
-       
+    
+      //console.log(this.props);
+      const{cartCount}=props
       return (
       <>
       <div className={styles.nav}>
@@ -17,14 +18,14 @@ import React from "react";
             <img className={styles.cartIcon} alt="Cart-Icon" 
                  src = "https://cdn-icons-png.flaticon.com/128/891/891462.png"    
             />
-            <span className={styles.cartCount} color='red' show={true}>5</span>
+            <span className={styles.cartCount} color='red' show={true}>{cartCount}</span>
         </div>
       </div>
 
       </>
       )
     }
-  }
+  
 
 export default Navbar;
 

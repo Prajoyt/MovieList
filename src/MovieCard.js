@@ -1,6 +1,6 @@
-import React from "react";
 
-class MovieCard extends React.Component {
+
+function MovieCard(props) {
   
   // addStars(){
   //     console.log('this', this)
@@ -58,14 +58,14 @@ class MovieCard extends React.Component {
 //   }
 
 
-  render() {
+  
     /*if we want to change the name of movies to data that can be done in folowing way
     const{movies:data}=this.props;
     console.log(data);
     const { plot, price, rating, stars,fav,cart } = data;*/
 
-const{title,plot,price,rating,star,fav,cart,poster}=this.props.movies
-const {movies, onIncStars, onClickFav, onClickAddtocart, onDecStars,handleRating} =  this.props
+const{title,plot,price,rating,star,fav,cart,poster}=props.movies
+const {movies, onIncStars, onClickFav, onClickAddtocart, onDecStars,handleRating} =  props
     return (
         //Movie Card
         <div className="movie-card">
@@ -131,5 +131,5 @@ const {movies, onIncStars, onClickFav, onClickAddtocart, onDecStars,handleRating
 );
     
   }
-}
+
 export default MovieCard;
